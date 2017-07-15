@@ -29,7 +29,7 @@ void printInt(int num , char name){
 	
 	// Format the string for a total or a die
 	if(name == '='){
-		sprintf(strA, " = %d", num);	
+		sprintf(strA, "= %d", num);	
 	}else{
 		sprintf(strA, "%d", num);	
 	}	
@@ -69,17 +69,19 @@ void main() {
 		char b = 'B';
 
 		// Prints both die numbers 
-		printInt(dieA ,'A');
-		printf(" + ");
-		printInt(dieB ,'B');
+		outputDieFace(dieA);
+		printf("\n\n + \n\n");
+		outputDieFace(dieB);
+		//printInt(dieB ,'B');
 
 		// Add the dice
 		total = addDice(dieA,dieB);	
 		
 		// Print the total 	
 		char equilSymbol = '=';
+		printf("\n\n");
 		printInt(total , equilSymbol);
-		printf("\n");
+		printf("\n\n");
 	
 		// Dont run the check if its the first roll as theirs no number to check it too
 		if(trys != 0){
@@ -111,7 +113,7 @@ void main() {
 	}else{
 		printf("You Lose! With ");
 		printInt(correctAnswers,' ');
-		printf("correct answers. :( \n");
+		printf(" correct answers. :( \n");
 	}
 
 }
