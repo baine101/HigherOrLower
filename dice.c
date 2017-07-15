@@ -48,6 +48,9 @@ void outputDieFace(int die){
 		case 6 :
 			printf("-----\n|o o|\n|o o|\n|o o|\n-----");
 		break;
+		
+		default : 
+			printf("╔══╗\n╚═╗║\n─╔╔╝\n─╠╣\n─╚╝");
 	}
 
 }
